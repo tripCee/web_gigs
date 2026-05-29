@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Navigation Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="sidebar-title">Gigs</div>
+
+    <div class="filter-group">
+      <label class="control-label" for="yearSlider">
+        Year <span id="yearDisplay" class="badge">----</span>
+      </label>
+      <input type="range" id="yearSlider" class="range-slider" min="2020" max="2026" value="2026" step="1">
+    </div>
+
+    <div class="filter-group">
+      <label class="control-label" for="monthSlider">
+        Month <span id="monthDisplay" class="badge">----</span>
+      </label>
+      <input type="range" id="monthSlider" class="range-slider" min="0" max="11" value="0" step="1">
+    </div>
+
+    <div class="filter-group">
+      <label class="control-label">
+        Category <span id="categoryDisplay" class="badge">None</span>
+      </label>
+      <div class="category-slider-wrapper">
+        <div class="vertical-slider-container">
+          <span class="slider-marker marker-top">Last</span>
+          <input type="range" id="categorySlider" class="vertical-slider" min="0" max="0" value="0" step="1">
+          <span class="slider-marker marker-bottom">First</span>
+        </div>
+        <div class="category-labels" id="categoryLabelsList"></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="main-card">
+      <div id="outputBox" class="timeline-output">
+        Gig: 
+        <span id="contentCategory" class="output-val">None</span> | 
+        <span id="contentMonth" class="output-val">----</span> 
+        <span id="contentYear" class="output-val">----</span>
+      </div>
+
+      <div class="carousel-container">
+        <button class="carousel-btn btn-prev" id="prevBtn">&lt;</button>
+        <div class="carousel-track" id="carouselTrack"></div>
+        <button class="carousel-btn btn-next" id="nextBtn">&gt;</button>
+        <div class="carousel-status" id="carouselStatus">0 / 0</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- External Script Connections -->
+  <script src="data-structure.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
