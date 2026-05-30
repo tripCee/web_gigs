@@ -203,9 +203,11 @@ function updateFullscreenZoom() {
 }
 
 function extractDayFromPath(path) {
-  const match = String(path).match(/\d{4}-(\d{2})-(\d{2})_/);
+  const match = String(path).match(/\d{4}-\d{2}-(\d{2})(?:--(\d{2}))?_/);
   if (!match) return null;
-  return parseInt(match[2], 10);
+  const startDay = parseInt(match[1], 10);
+  const endDay = match[2] ? parseInt(match[2], 10) : null;
+  return endDay ? `${startDay}–${endDay}` : startDay;
 }
 
 function renderSelections() {

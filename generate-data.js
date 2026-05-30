@@ -12,12 +12,12 @@ try {
   const folders = fs.readdirSync(dataDir);
 
   folders.forEach(folderName => {
-    const match = folderName.match(/^(\d{4})-(\d{2})-\d{2}_(.+)$/);
+    const match = folderName.match(/^([0-9]{4})-([0-9]{2})-([0-9]{2})(?:--([0-9]{2}))?_(.+)$/);
     
     if (match) {
       const year = match[1];
       const month = parseInt(match[2], 10).toString();
-      const category = match[3].replace(/[-_]/g, ' ');
+      const category = match[5].replace(/[-_]/g, ' ');
 
       if (!output[year]) output[year] = {};
       if (!output[year][month]) output[year][month] = {};

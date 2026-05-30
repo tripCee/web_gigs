@@ -290,6 +290,132 @@ const databaseMatrix = {
         "data/1995-02-25_Altered_States_[Tivoli]/03_Flyer2.jpg",
         "data/1995-02-25_Altered_States_[Tivoli]/04_Review_Rave.jpg"
       ]
+    },
+    "3": {
+      "Happy Happy Joy Joy [Roxy]": [
+        "data/1995-03-11_Happy_Happy_Joy_Joy_[Roxy]/01_Poster.jpg",
+        "data/1995-03-11_Happy_Happy_Joy_Joy_[Roxy]/02_Add_Roxy.jpg",
+        "data/1995-03-11_Happy_Happy_Joy_Joy_[Roxy]/03_Pic_BoyGeorge1.jpg",
+        "data/1995-03-11_Happy_Happy_Joy_Joy_[Roxy]/04_Pic_BoyGeorge2.jpg",
+        "data/1995-03-11_Happy_Happy_Joy_Joy_[Roxy]/05_Pic_BoyGeorge3.jpg"
+      ],
+      "Pearl Jam, The Meanies [BEC]": [
+        "data/1995-03-22_Pearl_Jam,_The_Meanies_[BEC]/01_Poster.jpg",
+        "data/1995-03-22_Pearl_Jam,_The_Meanies_[BEC]/02_Ticket_Front.jpg",
+        "data/1995-03-22_Pearl_Jam,_The_Meanies_[BEC]/03_SundayMail.jpg",
+        "data/1995-03-22_Pearl_Jam,_The_Meanies_[BEC]/04_setlist.jpg",
+        "data/1995-03-22_Pearl_Jam,_The_Meanies_[BEC]/05_Review_Rave-edit.png",
+        "data/1995-03-22_Pearl_Jam,_The_Meanies_[BEC]/06_Review_TimeOff.jpg",
+        "data/1995-03-22_Pearl_Jam,_The_Meanies_[BEC]/07_Pearl_Jam--News_Clip.mp4",
+        "data/1995-03-22_Pearl_Jam,_The_Meanies_[BEC]/08_1995-03-18_Pearl_Jam--Pissed_Off_Fans_Melbourne.mp4",
+        "data/1995-03-22_Pearl_Jam,_The_Meanies_[BEC]/09_1995-03-21--00_Pre_Show.mp4",
+        "data/1995-03-22_Pearl_Jam,_The_Meanies_[BEC]/10_1995-03-21_04_Corduroy.mp4",
+        "data/1995-03-22_Pearl_Jam,_The_Meanies_[BEC]/11_1995-03-21_05_Elderly_Woman_Behind_The_Counter_In_A_Small_Town.mp4",
+        "data/1995-03-22_Pearl_Jam,_The_Meanies_[BEC]/12_1995-03-21_07_Animal.mp4",
+        "data/1995-03-22_Pearl_Jam,_The_Meanies_[BEC]/13_1995-03-21_09_Blood.mp4",
+        "data/1995-03-22_Pearl_Jam,_The_Meanies_[BEC]/14_1995-03-21_19_Porch.mp4",
+        "data/1995-03-22_Pearl_Jam,_The_Meanies_[BEC]/15_1995-03-21_00_Aftershow.mp4",
+        "data/1995-03-22_Pearl_Jam,_The_Meanies_[BEC]/16_1995-03-22_08_Deep.mp4",
+        "data/1995-03-22_Pearl_Jam,_The_Meanies_[BEC]/17_1995-03-22_09_Daughter_[Audio].mp4",
+        "data/1995-03-22_Pearl_Jam,_The_Meanies_[BEC]/18_1995-03-22_12_Immortality.mp4",
+        "data/1995-03-22_Pearl_Jam,_The_Meanies_[BEC]/19_1995-03-22_16_Black_[Audio].mp4",
+        "data/1995-03-22_Pearl_Jam,_The_Meanies_[BEC]/20_1995-03-22_23_Against_The_70's_(with_Dave_Grohl)_[Audio].mp4"
+      ],
+      "The Meanies, Zarathustra, Uncle Extacy [UQ]": [
+        "data/1995-03-24_The_Meanies,_Zarathustra,_Uncle_Extacy_[UQ]/01_Add.jpg",
+        "data/1995-03-24_The_Meanies,_Zarathustra,_Uncle_Extacy_[UQ]/02_Review_TimeOff.jpg"
+      ],
+      "Slayer, Biohazard, Allegiance [Festival Hall]": [
+        "data/1995-03-30_Slayer,_Biohazard,_Allegiance_[Festival_Hall]/01_Poster1.jpg",
+        "data/1995-03-30_Slayer,_Biohazard,_Allegiance_[Festival_Hall]/02_Poster2.jpg",
+        "data/1995-03-30_Slayer,_Biohazard,_Allegiance_[Festival_Hall]/03_Poster3.jpeg",
+        "data/1995-03-30_Slayer,_Biohazard,_Allegiance_[Festival_Hall]/04_Flyer_AfterParty.jpg",
+        "data/1995-03-30_Slayer,_Biohazard,_Allegiance_[Festival_Hall]/05_Ticket_Front.jpg",
+        "data/1995-03-30_Slayer,_Biohazard,_Allegiance_[Festival_Hall]/06_Ticket_Back-autographed.jpg",
+        "data/1995-03-30_Slayer,_Biohazard,_Allegiance_[Festival_Hall]/07_setlist.jpg-1.jpg",
+        "data/1995-03-30_Slayer,_Biohazard,_Allegiance_[Festival_Hall]/08_Review_Rave-edit.jpg",
+        "data/1995-03-30_Slayer,_Biohazard,_Allegiance_[Festival_Hall]/09_Review_TimeOff.jpg"
+      ],
+      "Soundsurgery, Hateman, Katharsis [Roxy]": [
+        "data/1995-03-31_Soundsurgery,_Hateman,_Katharsis_[Roxy]/01_Flyer.jpg"
+      ]
+    },
+    "4": {
+      "Regurgitator, Front End Loader, Katharsis [Roxy]": [
+        "data/1995-04-01_Regurgitator,_Front_End_Loader,_Katharsis_[Roxy]/01_Add.jpg",
+        "data/1995-04-01_Regurgitator,_Front_End_Loader,_Katharsis_[Roxy]/02_Add-bw.jpg",
+        "data/1995-04-01_Regurgitator,_Front_End_Loader,_Katharsis_[Roxy]/03_Add_Roxy.jpg"
+      ],
+      "Misery, Killen God, Shunt [Roxy]": [
+        "data/1995-04-08_Misery,_Killen_God,_Shunt_[Roxy]/01_Flyer.jpg",
+        "data/1995-04-08_Misery,_Killen_God,_Shunt_[Roxy]/02_Add_Roxy.jpg"
+      ],
+      "Alternative Nation [Chandler]": [
+        "data/1995-04-13--14_Alternative_Nation_[Chandler]/01_Poster-colour.jpg",
+        "data/1995-04-13--14_Alternative_Nation_[Chandler]/02_Poster2.jpg",
+        "data/1995-04-13--14_Alternative_Nation_[Chandler]/03_Poster3.jpg",
+        "data/1995-04-13--14_Alternative_Nation_[Chandler]/04_Poster1.jpg",
+        "data/1995-04-13--14_Alternative_Nation_[Chandler]/05_News_article.jpg",
+        "data/1995-04-13--14_Alternative_Nation_[Chandler]/06_Ticket.jpg",
+        "data/1995-04-13--14_Alternative_Nation_[Chandler]/07_Ticket_Back-autographed.jpg",
+        "data/1995-04-13--14_Alternative_Nation_[Chandler]/08_Flyer_Front.jpg",
+        "data/1995-04-13--14_Alternative_Nation_[Chandler]/09_Flyer_Back.jpg",
+        "data/1995-04-13--14_Alternative_Nation_[Chandler]/10_setlist-therapy.jpg-1.jpg",
+        "data/1995-04-13--14_Alternative_Nation_[Chandler]/11_setlist-nin.jpg-1.jpg",
+        "data/1995-04-13--14_Alternative_Nation_[Chandler]/12_setlist-fnm.jpg-1.jpg",
+        "data/1995-04-13--14_Alternative_Nation_[Chandler]/13_Review_Rave1.jpg",
+        "data/1995-04-13--14_Alternative_Nation_[Chandler]/14_Review_Rave2.jpg",
+        "data/1995-04-13--14_Alternative_Nation_[Chandler]/15_Review_TimeOff1-rescan.jpg",
+        "data/1995-04-13--14_Alternative_Nation_[Chandler]/16_Review_TimeOff2.jpg",
+        "data/1995-04-13--14_Alternative_Nation_[Chandler]/17_Review_TimeOff3.jpg",
+        "data/1995-04-13--14_Alternative_Nation_[Chandler]/18_Review_TimeOff4.jpg"
+      ],
+      "4ZZZ Market Day  Zed Beat [Musgrave Park]": [
+        "data/1995-04-29_4ZZZ_Market_Day--Zed-Beat_[Musgrave_Park]/01_Poster2.jpg",
+        "data/1995-04-29_4ZZZ_Market_Day--Zed-Beat_[Musgrave_Park]/02_Pics_Rave.jpg",
+        "data/1995-04-29_4ZZZ_Market_Day--Zed-Beat_[Musgrave_Park]/03_Review_Rave-edit.jpg",
+        "data/1995-04-29_4ZZZ_Market_Day--Zed-Beat_[Musgrave_Park]/04_Review_TimeOff1.jpg",
+        "data/1995-04-29_4ZZZ_Market_Day--Zed-Beat_[Musgrave_Park]/05_Review_TimeOff2.jpg",
+        "data/1995-04-29_4ZZZ_Market_Day--Zed-Beat_[Musgrave_Park]/06_Mr Bastard - King of the Fuckin' Road-bf_oaSE_v_w.mp4",
+        "data/1995-04-29_4ZZZ_Market_Day--Zed-Beat_[Musgrave_Park]/07_Mr Bastard - Song from ＂Prisoner＂-FpHCuRozNDo.mp4"
+      ]
+    },
+    "5": {
+      "Suicidal Tendencies, Nitocris, Downtime [Festival Hall]": [
+        "data/1995-05-15_Suicidal_Tendencies,_Nitocris,_Downtime_[Festival_Hall]/01_Poster.jpg",
+        "data/1995-05-15_Suicidal_Tendencies,_Nitocris,_Downtime_[Festival_Hall]/02_Add.jpg",
+        "data/1995-05-15_Suicidal_Tendencies,_Nitocris,_Downtime_[Festival_Hall]/03_Ticket.jpg",
+        "data/1995-05-15_Suicidal_Tendencies,_Nitocris,_Downtime_[Festival_Hall]/04_ReviewRave.jpg",
+        "data/1995-05-15_Suicidal_Tendencies,_Nitocris,_Downtime_[Festival_Hall]/05_Review_TimeOff.jpg"
+      ],
+      "Soundsurgery, Emporium, Discordia, Womnal [Roxy]": [
+        "data/1995-05-26_Soundsurgery,_Emporium,_Discordia,_Womnal_[Roxy]/01_Add.jpg",
+        "data/1995-05-26_Soundsurgery,_Emporium,_Discordia,_Womnal_[Roxy]/02_Add_Roxy.jpg",
+        "data/1995-05-26_Soundsurgery,_Emporium,_Discordia,_Womnal_[Roxy]/03_Interview-Soundsurgery.jpg",
+        "data/1995-05-26_Soundsurgery,_Emporium,_Discordia,_Womnal_[Roxy]/04_Interview-Emporium.jpg"
+      ]
+    },
+    "6": {
+      "Regurgitator, The Mark Of Cain, Fur, Towtruck [Roxy]": [
+        "data/1995-06-23_Regurgitator,_The_Mark_Of_Cain,_Fur,_Towtruck_[Roxy]/01_Add.jpg",
+        "data/1995-06-23_Regurgitator,_The_Mark_Of_Cain,_Fur,_Towtruck_[Roxy]/02_Add_Roxy.jpg",
+        "data/1995-06-23_Regurgitator,_The_Mark_Of_Cain,_Fur,_Towtruck_[Roxy]/03_Review_Rave-edit.jpg",
+        "data/1995-06-23_Regurgitator,_The_Mark_Of_Cain,_Fur,_Towtruck_[Roxy]/04_Review_TimeOff-edit.jpg"
+      ],
+      "Dreamkillers, Bulldozer, Suiciety, Zarathustra [Roxy]": [
+        "data/1995-06-30_Dreamkillers,_Bulldozer,_Suiciety,_Zarathustra_[Roxy]/01_Add.jpg",
+        "data/1995-06-30_Dreamkillers,_Bulldozer,_Suiciety,_Zarathustra_[Roxy]/02_Add_Roxy.jpg",
+        "data/1995-06-30_Dreamkillers,_Bulldozer,_Suiciety,_Zarathustra_[Roxy]/03_Cover_Rave.jpg",
+        "data/1995-06-30_Dreamkillers,_Bulldozer,_Suiciety,_Zarathustra_[Roxy]/04_Dreamkillers '95 - 'SARAH' (Witcher⧸ Jobson) - 'Scorched Earth Policy' Album Launch.mp4"
+      ]
+    },
+    "7": {
+      "Tumbleweed, Spiderbait, Gravelrash [Roxy]": [
+        "data/1995-07-14_Tumbleweed,_Spiderbait,_Gravelrash_[Roxy]/01_Add.jpg",
+        "data/1995-07-14_Tumbleweed,_Spiderbait,_Gravelrash_[Roxy]/02_Add_Roxy.jpg",
+        "data/1995-07-14_Tumbleweed,_Spiderbait,_Gravelrash_[Roxy]/03_Pic_Tumbleweed.jpg",
+        "data/1995-07-14_Tumbleweed,_Spiderbait,_Gravelrash_[Roxy]/04_Review_TimeOff.jpg"
+      ]
     }
   }
 };
