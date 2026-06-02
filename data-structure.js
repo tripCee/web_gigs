@@ -415,6 +415,136 @@ const databaseMatrix = {
         "data/1995-07-14_Tumbleweed,_Spiderbait,_Gravelrash_[Roxy]/02_Add_Roxy.jpg",
         "data/1995-07-14_Tumbleweed,_Spiderbait,_Gravelrash_[Roxy]/03_Pic_Tumbleweed.jpg",
         "data/1995-07-14_Tumbleweed,_Spiderbait,_Gravelrash_[Roxy]/04_Review_TimeOff.jpg"
+      ],
+      "The Onyas, The Iron Shieks, Big Bongin Baby, Mr Bastard [Empire]": [
+        "data/1995-07-28_The_Onyas,_The_Iron_Shieks,_Big_Bongin_Baby,_Mr_Bastard_[Empire]/01_Add_Empire.jpg",
+        "data/1995-07-28_The_Onyas,_The_Iron_Shieks,_Big_Bongin_Baby,_Mr_Bastard_[Empire]/02_Review_Rave-edit.jpg"
+      ]
+    },
+    "8": {
+      "Dreamkillers, Kaos, Majenta [Crash & Burn]": [
+        "data/1995-08-05_Dreamkillers,_Kaos,_Majenta_[Crash_&_Burn]/01_Add.jpg",
+        "data/1995-08-05_Dreamkillers,_Kaos,_Majenta_[Crash_&_Burn]/02_Add_CrashNBurn.jpg"
+      ],
+      "Faith No More, Peyote [Festival Hall]": [
+        "data/1995-08-08_Faith_No_More,_Peyote_[Festival_Hall]/01_Poster.jpg",
+        "data/1995-08-08_Faith_No_More,_Peyote_[Festival_Hall]/02_Poster2.jpg",
+        "data/1995-08-08_Faith_No_More,_Peyote_[Festival_Hall]/03_Add_Peyote.jpg",
+        "data/1995-08-08_Faith_No_More,_Peyote_[Festival_Hall]/04_Cover_Rave.jpg",
+        "data/1995-08-08_Faith_No_More,_Peyote_[Festival_Hall]/05_Interview_Rave-FaithNoMore-edit.jpg",
+        "data/1995-08-08_Faith_No_More,_Peyote_[Festival_Hall]/06_Ticket1.jpg",
+        "data/1995-08-08_Faith_No_More,_Peyote_[Festival_Hall]/07_Ticket2.jpg",
+        "data/1995-08-08_Faith_No_More,_Peyote_[Festival_Hall]/08_Review_Rave-edit.jpg",
+        "data/1995-08-08_Faith_No_More,_Peyote_[Festival_Hall]/09_Review_TimeOff-rescan.jpg"
+      ]
+    },
+    "9": {
+      "Regurgitator, Cranky, Lizard Train, Blister [Roxy]": [
+        "data/1995-09-15_Regurgitator,_Cranky,_Lizard_Train,_Blister_[Roxy]/01_Add-edit.jpg",
+        "data/1995-09-15_Regurgitator,_Cranky,_Lizard_Train,_Blister_[Roxy]/02_Add_Roxy.jpg",
+        "data/1995-09-15_Regurgitator,_Cranky,_Lizard_Train,_Blister_[Roxy]/03_Review_TimeOff-edit.jpg"
+      ]
+    },
+    "10": {
+      "Infectious Grooves (Signing) [Rocking Horse Records]": [
+        "data/1995-10-07_Infectious_Grooves_(Signing)_[Rocking_Horse_Records]/01_Add.jpg"
+      ],
+      "4ZZZ Market Day  Zed Rox [Roxy]": [
+        "data/1995-10-28_4ZZZ_Market_Day--Zed_Rox_[Roxy]/01_Poster.jpg",
+        "data/1995-10-28_4ZZZ_Market_Day--Zed_Rox_[Roxy]/02_Add.jpg",
+        "data/1995-10-28_4ZZZ_Market_Day--Zed_Rox_[Roxy]/03_Add_Roxy.jpg",
+        "data/1995-10-28_4ZZZ_Market_Day--Zed_Rox_[Roxy]/04_Add_VelvetHammer.jpg",
+        "data/1995-10-28_4ZZZ_Market_Day--Zed_Rox_[Roxy]/05_Interview_Rave-VelvetHammer.jpg",
+        "data/1995-10-28_4ZZZ_Market_Day--Zed_Rox_[Roxy]/06_Review_Rave-edit.jpg"
+      ]
+    },
+    "11": {
+      "Nancy Vandal, Blowhard [Babble On Cafe]": [
+        "data/1995-11-05_Nancy_Vandal,_Blowhard_[Babble_On_Cafe]/01_Add_BabbleOn.jpg"
+      ],
+      "Meanies,Frenzal Rhomb, Budd, The Onyas [Roxy]": [
+        "data/1995-11-10_Meanies,Frenzal_Rhomb,_Budd,_The_Onyas_[Roxy]/01_Add2.jpg",
+        "data/1995-11-10_Meanies,Frenzal_Rhomb,_Budd,_The_Onyas_[Roxy]/02_Add1.jpg",
+        "data/1995-11-10_Meanies,Frenzal_Rhomb,_Budd,_The_Onyas_[Roxy]/03_Add_Roxy.jpg",
+        "data/1995-11-10_Meanies,Frenzal_Rhomb,_Budd,_The_Onyas_[Roxy]/04_Interview_Rave-Meanies.jpg"
+      ],
+      "Livid Festival [Davies Park]": [
+        "data/1995-11-25_Livid_Festival_[Davies_Park]/01_Poster2.jpg",
+        "data/1995-11-25_Livid_Festival_[Davies_Park]/02_Poster.jpg",
+        "data/1995-11-25_Livid_Festival_[Davies_Park]/03_Add_Spiderbait.jpg",
+        "data/1995-11-25_Livid_Festival_[Davies_Park]/04_Cover_Rave.jpg",
+        "data/1995-11-25_Livid_Festival_[Davies_Park]/05_Interview_Rave-NoMeansNo-edit.jpg",
+        "data/1995-11-25_Livid_Festival_[Davies_Park]/06_Interview_Rave-TMOC-edit.jpg",
+        "data/1995-11-25_Livid_Festival_[Davies_Park]/07_Ticket_1995_Livid.jpg",
+        "data/1995-11-25_Livid_Festival_[Davies_Park]/08_Timetable.jpg",
+        "data/1995-11-25_Livid_Festival_[Davies_Park]/09_Pics_Rave.jpg",
+        "data/1995-11-25_Livid_Festival_[Davies_Park]/10_Pics_TimeOff.jpg",
+        "data/1995-11-25_Livid_Festival_[Davies_Park]/11_Review_Rave1-edit.jpg",
+        "data/1995-11-25_Livid_Festival_[Davies_Park]/12_Review_Rave2-edit.jpg",
+        "data/1995-11-25_Livid_Festival_[Davies_Park]/13_Review_Rave3-edit.jpg",
+        "data/1995-11-25_Livid_Festival_[Davies_Park]/14_Review_TimeOff1.jpg",
+        "data/1995-11-25_Livid_Festival_[Davies_Park]/15_Livid Festival 1995 ｜ The Cruel Sea, You Am I, Babes In Toyland, Frenzal Rhomb, Rollins Band.mp4",
+        "data/1995-11-25_Livid_Festival_[Davies_Park]/16_You Am I - 1995-11-25 - Livid Festival, Brisbane - interview⧸Soldiers.mp4",
+        "data/1995-11-25_Livid_Festival_[Davies_Park]/17_Jessie - Paw (Livid Festival 1995).mp4",
+        "data/1995-11-25_Livid_Festival_[Davies_Park]/18_Hard Pig - Paw (Livid Festival 1995).mp4"
+      ]
+    },
+    "12": {
+      "Punk Pit Party [Crash & Burn]": [
+        "data/1995-12-08_Punk_Pit_Party_[Crash_&_Burn]/01_Add_CrashNBurn.jpg"
+      ]
+    }
+  },
+  "1996": {
+    "1": {
+      "Radio Birdman, Wayne Kramer, Green Room, Agent [Roxy]": [
+        "data/1996-01-19_Radio_Birdman,_Wayne_Kramer,_Green_Room,_Agent_[Roxy]/01_Poster.jpg",
+        "data/1996-01-19_Radio_Birdman,_Wayne_Kramer,_Green_Room,_Agent_[Roxy]/02_Add2.jpg",
+        "data/1996-01-19_Radio_Birdman,_Wayne_Kramer,_Green_Room,_Agent_[Roxy]/03_Add_RadioBirdman.jpg",
+        "data/1996-01-19_Radio_Birdman,_Wayne_Kramer,_Green_Room,_Agent_[Roxy]/04_Add_Roxy.jpg",
+        "data/1996-01-19_Radio_Birdman,_Wayne_Kramer,_Green_Room,_Agent_[Roxy]/05_Interview_Rave-RadioBirdman.jpg",
+        "data/1996-01-19_Radio_Birdman,_Wayne_Kramer,_Green_Room,_Agent_[Roxy]/06_Review_TimeOff-edit.jpg"
+      ],
+      "Porno For Pyros, The Jesus Lizard, Screamfeeder [Roxy]": [
+        "data/1996-01-22_Porno_For_Pyros,_The_Jesus_Lizard,_Screamfeeder_[Roxy]/01_Poster-colour.jpg",
+        "data/1996-01-22_Porno_For_Pyros,_The_Jesus_Lizard,_Screamfeeder_[Roxy]/02_Add2.jpg",
+        "data/1996-01-22_Porno_For_Pyros,_The_Jesus_Lizard,_Screamfeeder_[Roxy]/03_Add1.jpg",
+        "data/1996-01-22_Porno_For_Pyros,_The_Jesus_Lizard,_Screamfeeder_[Roxy]/04_Add_Roxy.jpg",
+        "data/1996-01-22_Porno_For_Pyros,_The_Jesus_Lizard,_Screamfeeder_[Roxy]/05_Interview_Rave-JesusLizard-edit.jpg",
+        "data/1996-01-22_Porno_For_Pyros,_The_Jesus_Lizard,_Screamfeeder_[Roxy]/06_setlist-porno.jpg",
+        "data/1996-01-22_Porno_For_Pyros,_The_Jesus_Lizard,_Screamfeeder_[Roxy]/07_Review_Rave-edit.jpg",
+        "data/1996-01-22_Porno_For_Pyros,_The_Jesus_Lizard,_Screamfeeder_[Roxy]/08_Review_TimeOff1.jpg",
+        "data/1996-01-22_Porno_For_Pyros,_The_Jesus_Lizard,_Screamfeeder_[Roxy]/09_Review_TimeOff2.jpg"
+      ]
+    },
+    "2": {
+      "Blister, One Inch Punch, Bantha Fodder [Crash & Burn]": [
+        "data/1996-02-16_Blister,_One_Inch_Punch,_Bantha_Fodder_[Crash_&_Burn]/01_Add_CrashNBurn.jpg",
+        "data/1996-02-16_Blister,_One_Inch_Punch,_Bantha_Fodder_[Crash_&_Burn]/02_Review_Rave-edit.jpg"
+      ],
+      "Frenzal Rhomb, Insurge [Crash & Burn]": [
+        "data/1996-02-24_Frenzal_Rhomb,_Insurge_[Crash_&_Burn]/01_Add1.jpg",
+        "data/1996-02-24_Frenzal_Rhomb,_Insurge_[Crash_&_Burn]/02_Add_CrashNBurn-allages.jpg",
+        "data/1996-02-24_Frenzal_Rhomb,_Insurge_[Crash_&_Burn]/03_Add_Insurge.jpg",
+        "data/1996-02-24_Frenzal_Rhomb,_Insurge_[Crash_&_Burn]/04_Interview_Rave-Frenzal.jpg"
+      ]
+    },
+    "3": {
+      "Rock Against The Election [Roxy]": [
+        "data/1996-03-02_Rock_Against_The_Election_[Roxy]/01_Poster.jpg",
+        "data/1996-03-02_Rock_Against_The_Election_[Roxy]/02_Add_Roxy.jpg",
+        "data/1996-03-02_Rock_Against_The_Election_[Roxy]/03_Poster_EndHoward.jpg"
+      ],
+      "4ZZZ Market Day  Zed O Mitter [Musgrave Park]": [
+        "data/1996-03-23_4ZZZ_Market_Day--Zed-O-Mitter_[Musgrave_Park]/01_Poster.jpg",
+        "data/1996-03-23_4ZZZ_Market_Day--Zed-O-Mitter_[Musgrave_Park]/02_Article_Rave.jpg",
+        "data/1996-03-23_4ZZZ_Market_Day--Zed-O-Mitter_[Musgrave_Park]/03_Pics_TimeOff.jpg",
+        "data/1996-03-23_4ZZZ_Market_Day--Zed-O-Mitter_[Musgrave_Park]/04_Review_Rave-edit.jpg"
+      ]
+    },
+    "5": {
+      "Pocket, Frank's Fishbowl, Polish [Rat Hotel]": [
+        "data/1996-05-01_Pocket,_Frank's_Fishbowl,_Polish_[Rat_Hotel]/01_Add_RatHotel.jpg"
       ]
     }
   }
