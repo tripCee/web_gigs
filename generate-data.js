@@ -12,12 +12,12 @@ try {
   const folders = fs.readdirSync(dataDir);
 
   folders.forEach(folderName => {
-    const match = folderName.match(/^([0-9]{4})-([0-9]{2})-([0-9]{2})(?:--([0-9]{2}))?_(.+)$/);
+    const match = folderName.match(/^([0-9]{4})-([0-9]{2})-([0-9]{2})(?:--([0-9]{2}))?(?:-\[([0-9]+)\])?_(.+)$/);
     
-    if (match) {
+    if (!match) return;
       const year = match[1];
       const month = parseInt(match[2], 10).toString();
-      const category = match[5].replace(/[-_]/g, ' ');
+      const category = match[6].replace(/[-_]/g, ' ');
 
       if (!output[year]) output[year] = {};
       if (!output[year][month]) output[year][month] = {};
@@ -33,7 +33,6 @@ try {
       }).map(file => `data/${folderName}/${file}`); // Save relative path
 
       output[year][month][category] = mediaFiles;
-    }
   });
 
   const fileContent = `// Automatically generated. Do not edit.\nconst databaseMatrix = ${JSON.stringify(output, null, 2)};`;

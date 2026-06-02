@@ -149,15 +149,20 @@ const databaseMatrix = {
         "data/1994-10-08_Livid_Festival_[Davies_Park]/18_Review_TimeOff-01.jpg",
         "data/1994-10-08_Livid_Festival_[Davies_Park]/19_Review_TimeOff-02.jpg",
         "data/1994-10-08_Livid_Festival_[Davies_Park]/20_Review_TimeOff-03.jpg",
-        "data/1994-10-08_Livid_Festival_[Davies_Park]/Review_TimeOff-edit.jpg"
+        "data/1994-10-08_Livid_Festival_[Davies_Park]/21_Livid Festival 1994.mp4",
+        "data/1994-10-08_Livid_Festival_[Davies_Park]/22_Powderfinger at the Livid Festival 1994.mp4",
+        "data/1994-10-08_Livid_Festival_[Davies_Park]/23_Tumbleweed at Livid 1994 Smash interrupts.mp4",
+        "data/1994-10-08_Livid_Festival_[Davies_Park]/24_LIVID FESTIVAL 1994 ＂BEST OF LIVID＂ TRIPLE J RADIO.mp4",
+        "data/1994-10-08_Livid_Festival_[Davies_Park]/25_HELMET  Live @ ＂Livid Festival, Brisbane Australia＂ 1994-i10c0Q6auiI.mp4",
+        "data/1994-10-08_Livid_Festival_[Davies_Park]/26_MuchMusic Beastie Boys Live at Livid Festival Brisbane Australia Oct 8, 1994.mp4"
       ],
       "4ZZZ Punk Rock Show Benefit [Babble On Cafe]": [
         "data/1994-10-20_4ZZZ_Punk_Rock_Show_Benefit_[Babble_On_Cafe]/01_Add.jpg",
         "data/1994-10-20_4ZZZ_Punk_Rock_Show_Benefit_[Babble_On_Cafe]/02_Add1.jpg",
         "data/1994-10-20_4ZZZ_Punk_Rock_Show_Benefit_[Babble_On_Cafe]/03_Add3.jpg",
-        "data/1994-10-20_4ZZZ_Punk_Rock_Show_Benefit_[Babble_On_Cafe]/04_Mr Bastard @ Babble On Nightclub 20.10.1994-XM0qdd2R_k0.mp4",
-        "data/1994-10-20_4ZZZ_Punk_Rock_Show_Benefit_[Babble_On_Cafe]/05_Big Bongin Baby @ Babble On Nightclub 20.10.1994-HTdr5xy6CV4.mp4",
-        "data/1994-10-20_4ZZZ_Punk_Rock_Show_Benefit_[Babble_On_Cafe]/06_The Onyas @ Babble On Nightclub 20.10.1994-WtIMsVdu6jE.mp4"
+        "data/1994-10-20_4ZZZ_Punk_Rock_Show_Benefit_[Babble_On_Cafe]/04_Mr Bastard @ Babble On Nightclub 20.10.1994.mp4",
+        "data/1994-10-20_4ZZZ_Punk_Rock_Show_Benefit_[Babble_On_Cafe]/05_Big Bongin Baby @ Babble On Nightclub 20.10.1994.mp4",
+        "data/1994-10-20_4ZZZ_Punk_Rock_Show_Benefit_[Babble_On_Cafe]/06_The Onyas @ Babble On Nightclub 20.10.1994.mp4"
       ],
       "4ZZZ Market Day  West End Of The World [Musgrave Park]": [
         "data/1994-10-29_4ZZZ_Market_Day--West_End_Of_The_World_[Musgrave_Park]/01_Poster.jpg",
@@ -365,7 +370,7 @@ const databaseMatrix = {
         "data/1995-04-13--14_Alternative_Nation_[Chandler]/12_setlist-fnm.jpg-1.jpg",
         "data/1995-04-13--14_Alternative_Nation_[Chandler]/13_Review_Rave1.jpg",
         "data/1995-04-13--14_Alternative_Nation_[Chandler]/14_Review_Rave2.jpg",
-        "data/1995-04-13--14_Alternative_Nation_[Chandler]/15_Review_TimeOff1-rescan.jpg",
+        "data/1995-04-13--14_Alternative_Nation_[Chandler]/15_Review1_TimeOff.jpg",
         "data/1995-04-13--14_Alternative_Nation_[Chandler]/16_Review_TimeOff2.jpg",
         "data/1995-04-13--14_Alternative_Nation_[Chandler]/17_Review_TimeOff3.jpg",
         "data/1995-04-13--14_Alternative_Nation_[Chandler]/18_Review_TimeOff4.jpg"
@@ -381,6 +386,9 @@ const databaseMatrix = {
       ]
     },
     "5": {
+      "Big Brisbane [St Pauls Tavern]": [
+        "data/1995-05-12_Big_Brisbane_[St_Pauls_Tavern]/01_Flyer.jpg"
+      ],
       "Suicidal Tendencies, Nitocris, Downtime [Festival Hall]": [
         "data/1995-05-15_Suicidal_Tendencies,_Nitocris,_Downtime_[Festival_Hall]/01_Poster.jpg",
         "data/1995-05-15_Suicidal_Tendencies,_Nitocris,_Downtime_[Festival_Hall]/02_Add.jpg",
@@ -545,6 +553,28 @@ const databaseMatrix = {
     "5": {
       "Pocket, Frank's Fishbowl, Polish [Rat Hotel]": [
         "data/1996-05-01_Pocket,_Frank's_Fishbowl,_Polish_[Rat_Hotel]/01_Add_RatHotel.jpg"
+      ],
+      "Regurgitator [Skinnys]": [
+        "data/1996-05-17-[1]_Regurgitator_[Skinnys]/01_Add.jpg"
+      ],
+      "Red Hot Chilli Peppers, Regurgitator [BEC]": [
+        "data/1996-05-17-[2]_Red_Hot_Chilli_Peppers,_Regurgitator_[BEC]/01_Poster-colour.webp",
+        "data/1996-05-17-[2]_Red_Hot_Chilli_Peppers,_Regurgitator_[BEC]/02_Poster.jpg",
+        "data/1996-05-17-[2]_Red_Hot_Chilli_Peppers,_Regurgitator_[BEC]/03_Add_Regurgitator.jpg",
+        "data/1996-05-17-[2]_Red_Hot_Chilli_Peppers,_Regurgitator_[BEC]/04_Ticket.jpg",
+        "data/1996-05-17-[2]_Red_Hot_Chilli_Peppers,_Regurgitator_[BEC]/05_setlist-rhcp.jpg-1.jpg",
+        "data/1996-05-17-[2]_Red_Hot_Chilli_Peppers,_Regurgitator_[BEC]/06_Review_Rave.jpg",
+        "data/1996-05-17-[2]_Red_Hot_Chilli_Peppers,_Regurgitator_[BEC]/07_Red Hot Chili Peppers Australian Tour 1996 commercial.mp4"
+      ]
+    },
+    "6": {
+      "Regurgitator, Boredoms, Sixfthick, Precision Oiler [Roxy]": [
+        "data/1996-06-08_Regurgitator,_Boredoms,_Sixfthick,_Precision_Oiler_[Roxy]/01_Add.jpg",
+        "data/1996-06-08_Regurgitator,_Boredoms,_Sixfthick,_Precision_Oiler_[Roxy]/02_Add_Roxy1.jpg",
+        "data/1996-06-08_Regurgitator,_Boredoms,_Sixfthick,_Precision_Oiler_[Roxy]/03_Cover_Rave.jpg",
+        "data/1996-06-08_Regurgitator,_Boredoms,_Sixfthick,_Precision_Oiler_[Roxy]/04_Interview_Rave-Boredoms-edit.jpg",
+        "data/1996-06-08_Regurgitator,_Boredoms,_Sixfthick,_Precision_Oiler_[Roxy]/05_Interview_Rave-Regurgitator-edit.jpg",
+        "data/1996-06-08_Regurgitator,_Boredoms,_Sixfthick,_Precision_Oiler_[Roxy]/06_Review_Rave-edit.jpg"
       ]
     }
   }
