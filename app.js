@@ -21,6 +21,8 @@ const carouselContainer = document.querySelector('.carousel-container');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const carouselStatus = document.getElementById('carouselStatus');
+const prevCategoryBtn = document.getElementById('prevCategoryBtn');
+const nextCategoryBtn = document.getElementById('nextCategoryBtn');
 const sidebarToggle = document.getElementById('sidebarToggle');
 const pageBody = document.body;
 
@@ -386,6 +388,88 @@ if (nextBtn) {
     carouselIndex = (carouselIndex === currentMediaFiles.length - 1) ? 0 : carouselIndex + 1;
     updateCarouselUI();
   });
+}
+
+function navigateCategory(direction) {
+  if (!categorySlider || currentCategoriesList.length === 0) return;
+  const currentCategoryIndex = parseInt(categorySlider.value) || 0;
+  const maxCategoryIndex = parseInt(categorySlider.max) || 0;
+
+  if (direction === 'next') {
+    if (currentCategoryIndex < maxCategoryIndex) {
+      categorySlider.value = currentCategoryIndex + 1;
+      renderSelections();
+      return;
+    }
+
+    const currentMonthIndex = parseInt(monthSlider.value) || 0;
+    const maxMonthIndex = parseInt(monthSlider.max) || 0;
+    const currentYear = parseInt(yearSlider.value);
+    const minYear = parseInt(yearSlider.min);
+    const maxYear = parseInt(yearSlider.max);
+
+    if (currentMonthIndex < maxMonthIndex) {
+      monthSlider.value = currentMonthIndex + 1;
+      handleMonthChange();
+      return;
+    }
+
+    if (currentYear < maxYear) {
+      yearSlider.value = currentYear + 1;
+      handleYearChange();
+      return;
+    }
+
+    yearSlider.value = minYear;
+    handleYearChange();
+    return;
+  }
+
+  if (direction === 'prev') {
+    if (currentCategoryIndex > 0) {
+      categorySlider.value = currentCategoryIndex - 1;
+      renderSelections();
+      return;
+    }
+
+    const currentMonthIndex = parseInt(monthSlider.value) || 0;
+    const currentYear = parseInt(yearSlider.value);
+    const minYear = parseInt(yearSlider.min);
+    const maxYear = parseInt(yearSlider.max);
+
+    if (currentMonthIndex > 0) {
+      monthSlider.value = currentMonthIndex - 1;
+      handleMonthChange();
+      categorySlider.value = parseInt(categorySlider.max) || 0;
+      renderSelections();
+      return;
+    }
+
+    if (currentYear > minYear) {
+      yearSlider.value = currentYear - 1;
+      handleYearChange();
+      monthSlider.value = parseInt(monthSlider.max) || 0;
+      handleMonthChange();
+      categorySlider.value = parseInt(categorySlider.max) || 0;
+      renderSelections();
+      return;
+    }
+
+    yearSlider.value = maxYear;
+    handleYearChange();
+    monthSlider.value = parseInt(monthSlider.max) || 0;
+    handleMonthChange();
+    categorySlider.value = parseInt(categorySlider.max) || 0;
+    renderSelections();
+  }
+}
+
+if (prevCategoryBtn) {
+  prevCategoryBtn.addEventListener('click', () => navigateCategory('prev'));
+}
+
+if (nextCategoryBtn) {
+  nextCategoryBtn.addEventListener('click', () => navigateCategory('next'));
 }
 
 yearSlider.addEventListener('input', handleYearChange);

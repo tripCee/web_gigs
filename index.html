@@ -10,7 +10,9 @@
   <button class="sidebar-toggle" id="sidebarToggle" aria-label="Close menu">×</button>
 
   <aside class="sidebar">
-    <div class="sidebar-title">Gigs</div>
+    <div class="sidebar-title">
+      <span>Gigs</span>
+    </div>
 
     <div class="filter-group">
       <label class="control-label" for="yearSlider">
@@ -43,13 +45,18 @@
 
   <main class="content">
     <div class="main-card">
-      <div id="outputBox" class="timeline-output">
-        Gig: 
-        <span id="contentCategory" class="output-val">None</span> | 
-        <span id="contentMonth" class="output-val">----</span> 
-        <span id="contentYear" class="output-val">----</span>
+      <div class="main-card-header">
+        <div id="outputBox" class="timeline-output">
+          Gig: 
+          <span id="contentCategory" class="output-val">None</span> | 
+          <span id="contentMonth" class="output-val">----</span> 
+          <span id="contentYear" class="output-val">----</span>
+        </div>
+        <div class="main-card-nav">
+          <button class="category-nav-btn" id="prevCategoryBtn" aria-label="Previous category">◀</button>
+          <button class="category-nav-btn" id="nextCategoryBtn" aria-label="Next category">▶</button>
+        </div>
       </div>
-
       <div class="carousel-container">
         <button class="carousel-btn btn-prev" id="prevBtn">&lt;</button>
         <div class="carousel-track" id="carouselTrack"></div>
