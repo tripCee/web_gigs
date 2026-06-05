@@ -20,6 +20,8 @@ const carouselTrack = document.getElementById('carouselTrack');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const carouselStatus = document.getElementById('carouselStatus');
+const sidebarToggle = document.getElementById('sidebarToggle');
+const pageBody = document.body;
 
 let availableMonthsForYear = []; 
 let currentCategoriesList = [];
@@ -341,6 +343,15 @@ if (nextBtn) {
 yearSlider.addEventListener('input', handleYearChange);
 monthSlider.addEventListener('input', handleMonthChange);
 categorySlider.addEventListener('input', renderSelections);
+
+if (sidebarToggle) {
+  sidebarToggle.addEventListener('click', () => {
+    pageBody.classList.toggle('sidebar-collapsed');
+    const isCollapsed = pageBody.classList.contains('sidebar-collapsed');
+    sidebarToggle.setAttribute('aria-label', isCollapsed ? 'Open menu' : 'Close menu');
+    sidebarToggle.textContent = isCollapsed ? '☰' : '×';
+  });
+}
 
 initYearBounds();
 handleYearChange();
