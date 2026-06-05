@@ -1,14 +1,53 @@
 const fs = require('fs');
 const path = require('path');
 
-const dataDir = path.join(__dirname, 'data');
+const defaultDataDir = path.join(__dirname, 'data');
+const dataDirArg = process.argv[2] || process.env.GIGS_DATA_DIR;
+const dataDir = dataDirArg ? path.resolve(dataDirArg) : defaultDataDir;
+const usingDefaultDataDir = path.resolve(defaultDataDir) === path.resolve(dataDir);
+
+// When an external data directory is used, attempt to create a local
+// symlink `data_external` pointing at that directory so the browser can
+// access files via a relative path (works for file:// and many static servers).
+const symlinkName = 'data_external';
+const symlinkPath = path.join(__dirname, symlinkName);
+let usingSymlink = false;
+try {
+  if (!usingDefaultDataDir) {
+    if (fs.existsSync(symlinkPath)) {
+      const stat = fs.lstatSync(symlinkPath);
+      if (stat.isSymbolicLink()) {
+        const target = fs.readlinkSync(symlinkPath);
+        if (path.resolve(target) === path.resolve(dataDir)) {
+          usingSymlink = true;
+        } else {
+          console.warn(`Existing symlink ${symlinkPath} points to ${target}, not ${dataDir}.`);
+        }
+      } else {
+        console.warn(`${symlinkPath} exists and is not a symlink; skipping symlink creation.`);
+      }
+    } else {
+      try {
+        fs.symlinkSync(dataDir, symlinkPath, 'junction');
+        usingSymlink = true;
+        console.log(`Created symlink ${symlinkPath} -> ${dataDir}`);
+      } catch (err) {
+        console.warn(`Failed to create symlink ${symlinkPath}: ${err.message}`);
+      }
+    }
+  }
+} catch (err) {
+  console.warn('Symlink setup check failed:', err.message);
+}
 const output = {};
 
 try {
   if (!fs.existsSync(dataDir)) {
-    fs.mkdirSync(dataDir);
+    console.error(`Data directory not found: ${dataDir}`);
+    process.exit(1);
   }
 
+  console.log(`Scanning data directory: ${dataDir}`);
   const folders = fs.readdirSync(dataDir);
 
   folders.forEach(folderName => {
@@ -30,12 +69,31 @@ try {
       const mediaFiles = files.filter(file => {
         const ext = path.extname(file).toLowerCase();
         return ['.jpg', '.jpeg', '.png', '.gif', '.mp4', '.webp'].includes(ext);
-      }).map(file => `data/${folderName}/${file}`); // Save relative path
+      }).map(file => {
+        if (usingDefaultDataDir) {
+          return `data/${folderName}/${file}`;
+        }
+        if (usingSymlink) {
+          // Use forward slashes for web paths
+          return `${symlinkName}/${folderName}/${file}`;
+        }
+        // Fallback: absolute filesystem path (may not be loadable from browser)
+        return path.join(dataDir, folderName, file);
+      });
 
       output[year][month][category] = mediaFiles;
   });
 
-  const fileContent = `// Automatically generated. Do not edit.\nconst databaseMatrix = ${JSON.stringify(output, null, 2)};`;
+  const pathMode = usingDefaultDataDir ? 'local:data' : (usingSymlink ? `symlink:${symlinkName}` : 'absolute');
+  const header = [
+    '// Automatically generated. Do not edit.',
+    `// Generated: ${new Date().toISOString()}`,
+    `// Scanned dataDir: ${dataDir}`,
+    `// Path mode: ${pathMode}`,
+    ''
+  ].join('\n');
+
+  const fileContent = `${header}const databaseMatrix = ${JSON.stringify(output, null, 2)};`;
   fs.writeFileSync(path.join(__dirname, 'data-structure.js'), fileContent);
   console.log('Successfully generated data-structure.js with media lists!');
 

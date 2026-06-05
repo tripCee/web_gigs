@@ -1,4 +1,7 @@
 // Automatically generated. Do not edit.
+// Generated: 2026-06-05T23:47:03.316Z
+// Scanned dataDir: /home/chriscc/Development/web/gigs/data
+// Path mode: local:data
 const databaseMatrix = {
   "1991": {
     "11": {
