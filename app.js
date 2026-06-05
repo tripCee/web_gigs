@@ -17,6 +17,7 @@ const contentCategory = document.getElementById('contentCategory');
 const labelsContainer = document.getElementById('categoryLabelsList');
 const outputBox = document.getElementById('outputBox');
 const carouselTrack = document.getElementById('carouselTrack');
+const carouselContainer = document.querySelector('.carousel-container');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const carouselStatus = document.getElementById('carouselStatus');
@@ -164,6 +165,12 @@ function handleFullscreenZoomKeys(event) {
     fullscreenZoomState.panX = 0;
     fullscreenZoomState.panY = 0;
     updateFullscreenZoom();
+  } else if (event.key === 'ArrowLeft') {
+    event.preventDefault();
+    if (prevBtn) prevBtn.click();
+  } else if (event.key === 'ArrowRight') {
+    event.preventDefault();
+    if (nextBtn) nextBtn.click();
   } else if (event.key === 'Escape') {
     // Exit fullscreen on Escape
     if (document.fullscreenElement) {
@@ -284,13 +291,14 @@ function setupCarousel() {
       element.title = 'Click image for fullscreen';
       element.style.cursor = 'zoom-in';
       element.addEventListener('click', async () => {
+        const fullscreenTarget = carouselContainer || element;
         try {
           if (document.fullscreenElement) {
             await document.exitFullscreen();
-          } else if (element.requestFullscreen) {
-            await element.requestFullscreen();
-          } else if (element.webkitRequestFullscreen) {
-            await element.webkitRequestFullscreen();
+          } else if (fullscreenTarget.requestFullscreen) {
+            await fullscreenTarget.requestFullscreen();
+          } else if (fullscreenTarget.webkitRequestFullscreen) {
+            await fullscreenTarget.webkitRequestFullscreen();
           }
         } catch (err) {
           console.warn('Fullscreen toggle failed', err);
@@ -321,7 +329,47 @@ function updateCarouselUI() {
       } catch (e) {}
     }
   });
+  if (document.fullscreenElement) {
+    maintainFullscreenCarousel();
+  }
   if (carouselStatus) carouselStatus.textContent = `${carouselIndex + 1} / ${currentMediaFiles.length}`;
+}
+
+function maintainFullscreenCarousel() {
+  if (!carouselTrack) return;
+  const fullscreenElement = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement;
+  if (!fullscreenElement) return;
+
+  const items = carouselTrack.querySelectorAll('.carousel-item-media');
+  const current = items && items[carouselIndex];
+  if (!current) return;
+
+  if (fullscreenElement.classList.contains('carousel-container')) {
+    if (current !== fullscreenZoomState.element) {
+      if (fullscreenZoomState.element) {
+        fullscreenZoomState.element.classList.remove('fullscreen-zoomed');
+        fullscreenZoomState.element.style.transform = 'none';
+        fullscreenZoomState.element.removeAttribute('data-zoom-level');
+      }
+      fullscreenZoomState.element = current;
+      current.classList.add('fullscreen-zoomed');
+      current.setAttribute('data-zoom-level', `${fullscreenZoomState.scale.toFixed(1)}x`);
+      updateFullscreenZoom();
+    }
+    return;
+  }
+
+  if (current === fullscreenElement) return;
+
+  try {
+    if (current.requestFullscreen) {
+      current.requestFullscreen().catch(() => {});
+    } else if (current.webkitRequestFullscreen) {
+      current.webkitRequestFullscreen();
+    }
+  } catch (e) {
+    // ignore fullscreen switch failures
+  }
 }
 
 if (prevBtn) {
@@ -401,10 +449,13 @@ document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
 function handleFullscreenChange() {
   const fullscreenElement = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement;
   
-  // Check if a carousel image is in fullscreen
-  if (fullscreenElement && fullscreenElement.classList.contains('carousel-item-media')) {
+  // Check if the carousel container or image is in fullscreen
+  if (fullscreenElement && (fullscreenElement.classList.contains('carousel-item-media') || fullscreenElement.classList.contains('carousel-container'))) {
     // Entering fullscreen
-    const target = fullscreenElement;
+    const target = fullscreenElement.classList.contains('carousel-container')
+      ? fullscreenElement.querySelector('.carousel-item-media.active')
+      : fullscreenElement;
+    if (!target) return;
     fullscreenZoomState.element = target;
     fullscreenZoomState.scale = 1;
     fullscreenZoomState.panX = 0;
@@ -448,6 +499,15 @@ function handleFullscreenChange() {
       window.removeEventListener('wheel', handleFullscreenWheel, { capture: false });
       window.removeEventListener('keydown', handleFullscreenZoomKeys, { capture: true });
       window.removeEventListener('keydown', handleFullscreenZoomKeys, { capture: false });
+      
+      if (fullscreenElement && fullscreenElement.classList.contains('carousel-container')) {
+        const activeItem = fullscreenElement.querySelector('.carousel-item-media.active');
+        if (activeItem) {
+          activeItem.classList.remove('fullscreen-zoomed');
+          activeItem.style.transform = 'none';
+          activeItem.removeAttribute('data-zoom-level');
+        }
+      }
       
       target.removeEventListener('wheel', handleFullscreenWheel, { capture: true });
       target.removeEventListener('wheel', handleFullscreenWheel, { capture: false });

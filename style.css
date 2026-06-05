@@ -240,6 +240,26 @@ body.sidebar-collapsed .content {
   justify-content: center;
 }
 
+.carousel-container:fullscreen,
+.carousel-container:-webkit-full-screen,
+.carousel-container:-moz-full-screen {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+}
+
+.carousel-container:fullscreen .carousel-item-media,
+.carousel-container:-webkit-full-screen .carousel-item-media,
+.carousel-container:-moz-full-screen .carousel-item-media {
+  display: none;
+}
+
+.carousel-container:fullscreen .carousel-item-media.active,
+.carousel-container:-webkit-full-screen .carousel-item-media.active,
+.carousel-container:-moz-full-screen .carousel-item-media.active {
+  display: block;
+}
+
 .carousel-track {
   width: 100%;
   height: 100%;
