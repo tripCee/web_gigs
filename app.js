@@ -34,7 +34,7 @@ function initYearBounds() {
   if (years.length > 0) {
     yearSlider.min = years[0];
     yearSlider.max = years[years.length - 1];
-    yearSlider.value = years[years.length - 1];
+    yearSlider.value = years[0];
     yearSlider.disabled = false;
   } else {
     yearSlider.disabled = true;
