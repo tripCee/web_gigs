@@ -548,6 +548,8 @@ function handleFullscreenChange() {
     target.classList.add('fullscreen-zoomed');
     target.setAttribute('data-zoom-level', '1x');
     target.style.transform = 'none';
+    target.style.transformOrigin = 'center center';
+    updateFullscreenZoom();
     
     // Use capture phase (true) to intercept wheel events before browser default behavior
     document.addEventListener('wheel', handleFullscreenWheel, { passive: false, capture: true });
