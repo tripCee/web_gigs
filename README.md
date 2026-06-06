@@ -19,11 +19,14 @@ A small static web app for browsing media by year, month, and category. It loads
 # Use a project-local data folder (default)
 node generate-data.js
 
-# Or scan an external folder (this attempts to create a local symlink `data_external`)
+# Scan an external folder and use the default local alias `data_external`
 node generate-data.js /path/to/your/gigs-data
 
-# Or set environment variable
-GIGS_DATA_DIR=/path/to/your/gigs-data node generate-data.js
+# Scan an external folder and emit a custom web alias path
+node generate-data.js /path/to/your/gigs-data /gigs-data
+
+# Or set environment variables
+GIGS_DATA_DIR=/path/to/your/gigs-data GIGS_DATA_ALIAS=/gigs-data node generate-data.js
 ```
 
 2. Serve the project root with any static server and open `index.html`:
@@ -40,8 +43,22 @@ http://localhost:8000/index.html
 ## External data and symlink behaviour
 
 - By default the script scans the local `data/` directory and generates relative web paths like `data/<folder>/<file>` in `data-structure.js`.
-- If you provide an external path (CLI arg or `GIGS_DATA_DIR`), the script will attempt to create a project-local symlink named `data_external` that points at the external directory. When that symlink exists, generated media URLs will use `data_external/<folder>/<file>` so the browser can load them via a relative path.
-- If the script cannot create the symlink (permission issues, an existing non-symlink file named `data_external`, platform restrictions), it will fall back to writing absolute filesystem paths into `data-structure.js` and print a warning. Absolute filesystem paths usually cannot be loaded by a browser from a static server.
+- If you provide an external data path and no alias, the script attempts to create a local `data_external` symlink and generate paths like `data_external/<folder>/<file>`.
+- If you provide an alias path via the second CLI arg or `GIGS_DATA_ALIAS`, the script scans the physical folder but emits web paths using that alias.
+  - Example: `node generate-data.js /mnt/external/gigs-data /gigs-data` will scan `/mnt/external/gigs-data` and generate `/gigs-data/<folder>/<file>`.
+  - This is useful when nginx uses `alias` to map a URL path to an external filesystem location.
+- If the script cannot create a local symlink for a relative alias path, it will still emit the alias path but print a warning. For absolute alias roots (like `/gigs-data`), no symlink is created.
+
+Example nginx config:
+
+```nginx
+location /gigs-data/ {
+    alias /mnt/external/gigs-data/;
+    autoindex off;
+}
+```
+
+Use the same alias path in `generate-data.js` and nginx so the browser URL matches the server alias.
 
 Manual symlink creation (Linux/macOS):
 

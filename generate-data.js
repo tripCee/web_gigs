@@ -3,17 +3,17 @@ const path = require('path');
 
 const defaultDataDir = path.join(__dirname, 'data');
 const dataDirArg = process.argv[2] || process.env.GIGS_DATA_DIR;
+const dataAliasArg = process.argv[3] || process.env.GIGS_DATA_ALIAS;
 const dataDir = dataDirArg ? path.resolve(dataDirArg) : defaultDataDir;
 const usingDefaultDataDir = path.resolve(defaultDataDir) === path.resolve(dataDir);
-
-// When an external data directory is used, attempt to create a local
-// symlink `data_external` pointing at that directory so the browser can
-// access files via a relative path (works for file:// and many static servers).
-const symlinkName = 'data_external';
-const symlinkPath = path.join(__dirname, symlinkName);
+const requestedWebRoot = dataAliasArg;
+const useDefaultDataPath = usingDefaultDataDir && !requestedWebRoot;
+const webRoot = requestedWebRoot || (usingDefaultDataDir ? 'data' : 'data_external');
+const aliasIsLocalPath = !useDefaultDataPath && !path.isAbsolute(webRoot);
+const symlinkPath = aliasIsLocalPath ? path.join(__dirname, webRoot) : null;
 let usingSymlink = false;
 try {
-  if (!usingDefaultDataDir) {
+  if (aliasIsLocalPath) {
     if (fs.existsSync(symlinkPath)) {
       const stat = fs.lstatSync(symlinkPath);
       if (stat.isSymbolicLink()) {
@@ -70,21 +70,18 @@ try {
         const ext = path.extname(file).toLowerCase();
         return ['.jpg', '.jpeg', '.png', '.gif', '.mp4', '.webp'].includes(ext);
       }).map(file => {
-        if (usingDefaultDataDir) {
+        if (useDefaultDataPath) {
           return `data/${folderName}/${file}`;
         }
-        if (usingSymlink) {
-          // Use forward slashes for web paths
-          return `${symlinkName}/${folderName}/${file}`;
-        }
-        // Fallback: absolute filesystem path (may not be loadable from browser)
-        return path.join(dataDir, folderName, file);
+        return `${webRoot}/${folderName}/${file}`;
       });
 
       output[year][month][category] = mediaFiles;
   });
 
-  const pathMode = usingDefaultDataDir ? 'local:data' : (usingSymlink ? `symlink:${symlinkName}` : 'absolute');
+  const pathMode = useDefaultDataPath
+    ? 'local:data'
+    : (requestedWebRoot ? `alias:${webRoot}` : (usingSymlink ? `symlink:${webRoot}` : 'absolute'));
   const header = [
     '// Automatically generated. Do not edit.',
     `// Generated: ${new Date().toISOString()}`,
