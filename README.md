@@ -70,9 +70,18 @@ If you create the symlink manually, re-run `node generate-data.js` (or update `d
 
 ## Usage notes
 
-- Keyboard: `ArrowLeft` / `ArrowRight` to navigate; `Home` / `End` to jump; `Space` to pause/play videos.
-- Click media to toggle browser fullscreen. The app attempts to preserve fullscreen when navigating items.
-- The Category / Year sliders are rendered to match visible label order and start at the oldest year by default.
+- **Navigation**: `ArrowLeft` / `ArrowRight` to navigate; `Home` / `End` to jump; `Space` to pause/play videos.
+- **Fullscreen**: Click any media to toggle browser fullscreen. The app preserves fullscreen when navigating items.
+- **Fullscreen zoom** (desktop):
+  - Scroll wheel or `+` / `-` keys to zoom in/out.
+  - `0` key to reset zoom and pan.
+  - Middle mouse button drag to pan around the zoomed image.
+  - `Esc` to exit fullscreen.
+- **Fullscreen zoom** (touch devices):
+  - Two-finger pinch gesture to zoom in/out.
+  - One-finger drag to pan around the zoomed image.
+  - Tap the back button or `Esc` to exit fullscreen.
+- **Sliders**: The Category / Year sliders are rendered to match visible label order and start at the oldest year by default.
 
 ## Troubleshooting
 
