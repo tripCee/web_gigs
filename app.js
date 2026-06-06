@@ -111,7 +111,9 @@ let fullscreenZoomState = {
   minScale: 1,
   maxScale: 5,
   panX: 0,
-  panY: 0
+  panY: 0,
+  touchStartDistance: null,
+  touchStartScale: null
 };
 
 function handleFullscreenWheel(event) {
@@ -199,6 +201,37 @@ function handleFullscreenPan(event) {
   
   fullscreenZoomState.lastX = event.clientX;
   fullscreenZoomState.lastY = event.clientY;
+}
+
+function handleTouchPinch(event) {
+  if (!fullscreenZoomState.element || event.touches.length < 2) return;
+  
+  event.preventDefault();
+  
+  const touch1 = event.touches[0];
+  const touch2 = event.touches[1];
+  const dx = touch2.clientX - touch1.clientX;
+  const dy = touch2.clientY - touch1.clientY;
+  const distance = Math.sqrt(dx * dx + dy * dy);
+  
+  if (!fullscreenZoomState.touchStartDistance) {
+    fullscreenZoomState.touchStartDistance = distance;
+    fullscreenZoomState.touchStartScale = fullscreenZoomState.scale;
+    return;
+  }
+  
+  const scaleFactor = distance / fullscreenZoomState.touchStartDistance;
+  const newScale = Math.min(
+    Math.max(fullscreenZoomState.touchStartScale * scaleFactor, fullscreenZoomState.minScale),
+    fullscreenZoomState.maxScale
+  );
+  fullscreenZoomState.scale = newScale;
+  updateFullscreenZoom();
+}
+
+function handleTouchEnd(event) {
+  fullscreenZoomState.touchStartDistance = null;
+  fullscreenZoomState.touchStartScale = null;
 }
 
 function updateFullscreenZoom() {
@@ -566,6 +599,14 @@ function handleFullscreenChange() {
     target.addEventListener('keydown', handleFullscreenZoomKeys, { capture: false });
     target.addEventListener('mousemove', handleFullscreenPan, { capture: true });
     target.addEventListener('mousemove', handleFullscreenPan, { capture: false });
+    
+    // Touch pinch-to-zoom support
+    document.addEventListener('touchmove', handleTouchPinch, { passive: false, capture: true });
+    document.addEventListener('touchend', handleTouchEnd, { capture: true });
+    target.addEventListener('touchmove', handleTouchPinch, { passive: false, capture: true });
+    target.addEventListener('touchmove', handleTouchPinch, { passive: false, capture: false });
+    target.addEventListener('touchend', handleTouchEnd, { capture: true });
+    target.addEventListener('touchend', handleTouchEnd, { capture: false });
   } else {
     // Exiting fullscreen - clean up
     if (fullscreenZoomState.element) {
@@ -601,6 +642,13 @@ function handleFullscreenChange() {
       target.removeEventListener('keydown', handleFullscreenZoomKeys, { capture: false });
       target.removeEventListener('mousemove', handleFullscreenPan, { capture: true });
       target.removeEventListener('mousemove', handleFullscreenPan, { capture: false });
+      target.removeEventListener('touchmove', handleTouchPinch, { capture: true });
+      target.removeEventListener('touchmove', handleTouchPinch, { capture: false });
+      target.removeEventListener('touchend', handleTouchEnd, { capture: true });
+      target.removeEventListener('touchend', handleTouchEnd, { capture: false });
+      
+      document.removeEventListener('touchmove', handleTouchPinch, { capture: true });
+      document.removeEventListener('touchend', handleTouchEnd, { capture: true });
       
       fullscreenZoomState.element = null;
       fullscreenZoomState.scale = 1;
